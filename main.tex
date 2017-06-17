@@ -1,0 +1,92 @@
+\documentclass[twocolumn,9.5pt,fleqn,dvipdfmx]{jsbook}
+%\usepackage{amsmath,amsfonts,amssymb,mdwlist,graphics,makeidx,booktabs,colortbl,bm}
+\usepackage{amsmath,amsfonts,amssymb,mdwlist,graphics,makeidx,booktabs,bm}
+\usepackage[dvipdfmx]{colortbl}
+% ↓図の位置指定
+\usepackage{here}
+% emathWは多項式の割り算の筆算表記に必要。
+\usepackage{emathW}
+% emathEyは小問を横に並べるのに必要。
+\usepackage{emathEy}
+% emathWsは掛け算の筆算で必要。
+\usepackage{emathWs}
+%\usepackage[dvips]{graphicx}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{enumerate}
+\usepackage{ascmac}
+% multicolは索引頁の3段組の為。
+\usepackage{multicol}
+% ↓teiseiを使うのに必要
+\usepackage{emath,emathP,epic,eepic}
+% ↓コメントアウトを使う
+\usepackage{comment}
+\setlength{\topmargin}{-1.3cm}
+\setlength{\textheight}{710pt}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{-0.7cm}
+\setcounter{tocdepth}{1}
+\makeindex
+
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\newcommand{\qed}{\hfill$\blacksquare$\par}
+\newcommand{\fref}[1]{図\ref{#1}}
+\newcommand{\tref}[1]{表\ref{#1}}
+\newcommand{\eref}[1]{式(\ref{#1})}
+\newcommand{\pref}[1]{P.\pageref{#1}}
+\newcommand{\peref}[1]{P.\pageref{#1}式(\ref{#1})}
+\newcommand{\kugirisen}{\noindent \rule{\columnwidth}{0.1mm}}
+\newcommand{\mv}{\vspace{0.2cm}}
+\newcommand{\hv}{\vspace{0.4cm}}
+\newcommand{\vv}{\vspace{0.6cm}}
+
+% 以下の2行はemathの変な式番号書式をもとに戻すために必要。
+\renewcommand{\tagform}[1]{(#1)}%
+\preEqlabel{}%
+
+\def\theenumii{\arabic{enumii}}
+\def\labelenumii{\tt (\theenumii)}
+\renewcommand{\labelenumi}{(\theenumi)}
+
+\newtheorem{exmpl}{例}[chapter]
+\newtheorem{q}{● 問}
+\newtheorem{freqmiss}{\small よくある間違い}
+\newtheorem{faq}{{\small よくある質問}}
+\newtheorem{exq}{演習問題}
+\DeclareMathOperator{\divg}{div}
+
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\grad}{grad}
+%\DeclareMathOperator{\tr}{tr}
+
+
+
+
+\begin{document}
+\title {{\Huge 物理学I教材}\\ }
+\author{{\Large (ニュートン力学)}\\ }
+%\date{{\Large 筑波大学生物資源学類　平成29年度 春学期 (2017/06/02版)}}
+\date{{\Large 筑波大学生物資源学類　平成29年度 春学期 (2017/06/16版)}}
+\maketitle
+\newpage
+\frontmatter
+%\include{000_guidance}
+\tableofcontents
+\mainmatter
+\include{010_intro}
+\include{020_force}
+\include{030_energy}
+\include{040_NewtonLaw}
+\include{050_motions}
+\include{060_ConsEnergy1}
+\include{070_ConsMom}
+\include{080_energy_temp}
+\include{090_ConsEnergy2}
+\include{100_ConsAngMom}
+\include{110_MomInert}
+\include{120_InertFram}
+\include{130_electricity}
+\include{140_quantum}
+\printindex
+\end{document}
+

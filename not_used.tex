@@ -1,0 +1,261 @@
+\begin{faq}{\small\textgt{
+
+xの上にドット
+
+
+「知之爲知之, 不知爲不知。是知也。（これを知るを知るとし, 知らざるを知らずと為す。これ知るなり）」
+孔子（論語）\\
+
+
+
+「理解が遅いことは気にする必要がありません。むしろ早すぎる人の
+ほうが上滑りしてしまって, 長い目で見ると, あまり遠くまでは
+いけないものです。」西村泰一先生（数学系）
+
+「数学でわかるというのは悟りに通じるところがあって, 急いで結果をだそうとすると逆効果です。
+こつこつやっていると, 不思議なもので, ある時忽然とすべてが見えてきます。」西村泰一先生（数学系）
+
+
+\begin{q}\label{q:Boltzman_dist}
+ボルツマン分布とは何か?
+\end{q}
+\vspace{0.6cm}
+
+
+
+
+\begin{q}\label{q:entropy_thermal_conduct} 同じ体積の2つの容器が
+互いに隣接している。2つの容器が接する部分（壁）では熱の移動が可能であるが, 
+2つの容器の外の世界との熱の移動はできない（つまり2つの容器の壁は, 
+互いが接する部分以外は断熱材でできている）。また, これらの容器は変形しない。
+（従って, 外界との熱や仕事のやりとりはできない）。2つの容器のそれぞれに, 
+同じ種類の気体を同じモル数だけ入れて封入する。最初, 片方の容器
+（それを容器1と呼ぶ)の温度を$T_1$, もう片方の容器（それを容器2と呼ぶ)
+の温度を$T_2$とし, $T_1<T_2$とする。これを放おって置くと, 容器2から次第に
+熱が伝わって容器1は温かくなり, 容器2は冷えていくだろう。最終的には, 
+両方とも, $(T_1+T_2)/2$という温度に落ち着くだろう。この変化で, 
+容器1と容器2のそれぞれのエントロピーの変化の総和を求めよ。
+
+
+
+
+
+
+\item 海洋の平均水深は3,800~m程度である。この深さでの水圧は, 地表における大気圧の何倍程度か?
+
+ハイヒール（かかとが細く高い靴）のかかと
+にはすんごい高圧がかかっている, というのを聞いたことがあるだろうか? 
+それを計算してみよう!質量48~kgの人物がハイヒールを履いている。
+左右それぞれのかかとの面積を2~cm$^2$としよう。この人が立っているとき, 
+体重は左右両足で均等に支えられ, また, 
+片足にかかる体重も, つまさきとかかとで均等に支えられるとしよう。すると, 
+片方のかかとは, 体重の1/4を支えることになる。このとき, かかとにかかる
+圧力を求めよ。\end{q}
+
+\begin{q}\label{q:pressure2} 地質学では, 地球内部がどうなっているかを
+推測するために, ダイヤモンド・アンビル・セルというものを使って実験する。
+\begin{enumerate}
+\item ダイヤモンド・アンビル・セルがどのようなものなのかを調べよ（文献・ネットなどで）。
+\item 地球の半径と質量を調べよ（文献・ネットなどで）。
+\item それをもとに, 地球の密度を求めよ（質量/体積）。
+\item ダイヤモンド・アンビル・セルを使うと, 100~GPa程度の圧力を実現できるが, 
+これは地下何mくらいの深さの圧力に相当するか, 計算せよ。
+\end{enumerate}
+\end{q}
+
+
+
+
+
+
+
+
+
+\section{円運動や単振動の表し方}
+
+円運動を考えよう。動点$P(x, y)$が, $xy$平面上で, 原点$O$を中心とする半径$r$の円周上
+を回転するとしよう。OPと$x$軸のなす角を$\theta$とし, 極座標を考えると
+\[(x(t), y(t)=(r\cos\theta, r\sin\theta)\]
+となる。
+
+さて, 簡単のため, 時刻$t=0$で$P$は$x$軸上の点$P_0=(r, 0)$にいるとする。
+OPとOP_0のなす角$\theta$は, 時間とともに変わっていく。
+と表現できる。
+ことを示せ（$\omega$は正の定数）。
+\suspend{enumerate}
+\begin{enumerate}
+さて, 時刻$t$のとき, $P$は点Aにいて, そこから微小時間$dt$が経過したら$P$は点Bにいるとする。
+\resume{enumerate}
+\item 点$A$の座標は
+\[(r\cos\omega t, r\sin\omega t)\]
+であり, 点$B$の座標は
+\[(r\cos\{\omega (t+dt)\}, r\sin\{\omega (t+dt)\}\]
+であることを示せ。
+\item 角AOBは$\omega dt$であることを示せ。
+\item 点$B$は点$A$を角$\omega dt$だけ回転した位置にあることを示せ。
+\item $dt$の間に, 角$POP_0$は$\omega dt$だけ大きくなったことを示せ。
+\item 単位時間あたり, 角$POP_0$は$\omega$だけ大きくなったことを示せ。
+\suspend{enumerate}
+一般に, 円運動で「単位時間あたりに進む角」を「角速度」(angular velocity)と呼ぶ。
+上の$\omega$は, この円運動の角速度である。半径と角速度が一定の円運動を等速円運動という。
+\resume{enumerate}
+\item 弧$AB$の長さは$r\omega dt$であることを示せ。
+\item 点Pは, $dt$の間に$r\omega dt$だけ進んだことを示せ。
+\item 点Pの速さ（速度の絶対値）$v$は, $v=r\omega$となることを示せ。
+\item $\omega$が正の値の場合と負の値の場合で, 円運動の様子はどのように違うか? 
+\item $\omega t=2\pi$のとき, $P$は出発点$P_0$に戻ってくることを示せ。
+\item そのときの$t$を$T$とすると, $T=2\pi/\omega$となることを示せ。
+一般に, 同じことが繰り返し起きる現象（周期的な現象）について, ある状態起きてから, 
+その状態が再び起きるまでの時間を周期(period)と呼ぶ。上の$T$は, この円運動の周期である。
+\item この$xy$平面を複素平面とみなし, $x$軸を実軸, $y$軸を虚軸とみなせば, 動点$P$の位置は, 
+\[z=re^{i\omega t}\]
+という複素数$z$で表すことができることを示せ。
+\end{enumerate}
+\vspace{0.3cm}
+
+\item 同様に円運動を考えよう。ただし, こんどは動点$P$が, 時刻$t=0$で
+\[\text{点}P_1(r\cos\delta, r\sin\delta\]
+にいるとする。その他はかわらない。つまり, $P$は原点$O$を中心とする半径$r$の円周上を一定の角速度$\omega$で運動する。
+\begin{enumerate}
+\item 角$POP_0$は$\omega t+\delta$となることを示せ。
+\item
+\[(x(t), y(t)=(r\cos(\omega t+\delta), r\sin(\omega t+\delta)\]
+と表現できることを示せ。
+\item この$xy$平面を複素平面とみなし, $x$軸を実軸, $y$軸を虚軸とみなせば, 動点$P$の位置は, 
+\[z=re^{i(\omega t+\delta)}\]
+という複素数$z$で表すことができることを示せ。
+\end{enumerate}
+
+ここで, sinやcosや$e$の肩（指数）などに現れた, 
+\[\omega t+\delta\]
+を, 「位相」という。一般的に, 位相とは, 周期的な現象において, 現在の状態が, 
+ある基準状態（この例では$P$が$P_0$にいること）からどのくらい離れているかを, 
+角（ラジアン）で表現するものである。$\delta$のことを位相と呼ぶこともある。角速度は
+「単位時間あたりの位相の変化量」であるとも言える。
+\vspace{0.3cm}
+
+\item 同様に円運動を考えよう。ただし, こんどは位相が$t$の関数$\theta(t)$で与えられるとしよう。
+その他はかわらない。つまり, $P$は原点$O$を中心とする半径$r$の円周上を運動する。
+\begin{enumerate}
+\item
+\[(x(t), y(t)=(r\cos \theta(t), r\sin \theta(t))\]
+と表現できることを示せ。
+\item 時刻$t$における角速度は, 
+\[\frac{d\theta}{dt}\]
+で与えられることを示せ。
+\item 特に, $\omega, \delta$を定数として, $\theta=\omega t+\delta$と与えられる場合, 
+角速度は一定値$\omega$をとることを示せ。。
+\item この$xy$平面を複素平面とみなし, $x$軸を実軸, $y$軸を虚軸とみなせば, 動点$P$の位置は, 
+\[z=re^{i\theta(t)}\]
+という複素数$z$で表すことができることを示せ。
+\end{enumerate}
+\vspace{0.3cm}
+\suspend{enumerate}
+
+
+
+$x$軸上の単振動
+\[x=x_0\cos\omega t\]
+を考えよう（$x_0$は定数。$\omega$は正の定数。$t$は時刻）
+ここで$\omega$を角速度と呼ぶ。これはどういう意味を持つ定数だろうか? 
+この運動をグラフに描くと, $x=\cos t$のグラフを縦方向に$x_0$倍, 
+横方向に$1/\omega$倍したものになる\footnote{その理由は「数学リメディアル教材」17ページ}。
+従って, $\omega$が大きいほど, たくさんの振動が詰まったグラフになる。つまり振動のスピードが
+速くなる。
+
+
+
+
+
+\item 動点$P$は, $xy$平面内を自由に運動しており, 時刻$t$のとき, 
+原点から距離$r(t)$, $x$軸からの角$\theta(t)$にいるとする。時刻$t$における$P$の位置, 速度, 加速度を
+それぞれ, $(x(t), y(t)), (v_x(t), v_y(t)), (a_x(t), a_y(t))$とする。
+\begin{enumerate}
+\item
+\[(x(t), y(t)=(r(t)\cos \theta(t), r(t)\sin \theta(t))\]
+を示せ。
+\[(v_x(t), v_y(t)=(\dot r \cos \theta-r\dot\theta\sin\theta, \dot r \sin \theta+r\dot\theta\cos\theta)\]
+を示せ。
+\[(a_x(t), a_y(t)=(\dot r \cos \theta-r\dot\theta\sin\theta, \dot r \sin \theta+r\dot\theta\cos\theta)\]
+を示せ。
+
+
+\item この$xy$平面を複素平面とみなし, $x$軸を実軸, $y$軸を虚軸とみなせば, 動点$P$の位置は, 
+\[z=r(t)e^{i\theta(t)}\]
+という複素数$z$で表すことができることを示せ。
+\end{enumerate}
+
+
+
+\suspend{enumerate}
+
+
+
+
+%
+\begin{q}\label{q:
+時刻$t$の関数であるような2つのベクトル$\pmb{a}(t),\,\pmb{b}(t)$について, 
+次式を示せ（ヒント：成分で考えよ）：
+\begin{eqnarray}
+\frac{d}{dt}\bigl(\pmb{a}\times\pmb{b}\bigr)=\Bigl(\frac{d\pmb{a}}{dt}\Bigr)\times\pmb{b}
++\pmb{a}\times\Bigl(\frac{d\pmb{b}}{dt}\Bigr)
+\end{eqnarray}
+\end{q}
+\end{enumerate}
+
+
+
+
+
+% 
+\noindent{\textbf{答}}\ref $\pmb{a}=a_1\pmb{e}_1+a_2\pmb{e}_2+a_3\pmb{e}_3$, $\pmb{b}=b_1\pmb{e}_1+b_2\pmb{e}_2+b_3\pmb{e}_3$, 
+$\pmb{c}=c_1\pmb{e}_1+c_2\pmb{e}_2+c_3\pmb{e}_3$とする。$i, j, k$をそれぞれ$1, 2, 3$のどれかとすると, 
+$V$の交代性から, $i, j, k$のうち少なくとも2つが同じなら, $V(\pmb{e}_i, \pmb{e}_j, \pmb{e}_k)=0$となる。そのこと
+と多重線型性から, 
+\begin{eqnarray}V(\pmb{a}, \pmb{b}, \pmb{c})=V(a_1\pmb{e}_1+a_2\pmb{e}_2+a_3\pmb{e}_3,\,\end{eqnarray}
+\begin{eqnarray}b_1\pmb{e}_1+b_2\pmb{e}_2+b_3\pmb{e}_3,\,c_1\pmb{e}_1+c_2\pmb{e}_2+c_3\pmb{e}_3)\end{eqnarray}
+\begin{eqnarray}=a_1b_2c_3V(\pmb{e}_1, \pmb{e}_2, \pmb{e}_3)+a_1b_3c_2V(\pmb{e}_1, \pmb{e}_3, \pmb{e}_2)\end{eqnarray}
+\begin{eqnarray}+a_2b_1c_3V(\pmb{e}_2, \pmb{e}_1, \pmb{e}_3)+a_2b_3c_1V(\pmb{e}_2, \pmb{e}_3, \pmb{e}_1)\end{eqnarray}
+\begin{eqnarray}+a_3b_1c_2V(\pmb{e}_3, \pmb{e}_1, \pmb{e}_2)+a_3b_2c_1V(\pmb{e}_3, \pmb{e}_2, \pmb{e}_1)\end{eqnarray}
+となる。ところで, 
+\begin{eqnarray}V(\pmb{e}_1, \pmb{e}_2, \pmb{e}_3)=V(\pmb{e}_2, \pmb{e}_3, \pmb{e}_1)=V(\pmb{e}_3, \pmb{e}_1, \pmb{e}_2)=1\end{eqnarray}
+\begin{eqnarray}V(\pmb{e}_1, \pmb{e}_3, \pmb{e}_2)=V(\pmb{e}_2, \pmb{e}_1, \pmb{e}_3)=V(\pmb{e}_3, \pmb{e}_2, \pmb{e}_1)=-1\end{eqnarray}
+従って, 
+\begin{eqnarray}V(\pmb{a}, \pmb{b}, \pmb{c})=a_1b_2c_3-a_1b_3c_2\end{eqnarray}
+\begin{eqnarray}-a_2b_1c_3+a_2b_3c_1+a_3b_1c_2-a_3b_2c_1\end{eqnarray}
+\begin{eqnarray}=c_1(a_2b_3-a_3b_2)+c_2(a_3b_1-a_1b_3)+c_3(a_1b_2-a_2b_1)\end{eqnarray}
+\begin{eqnarray}=(a_2b_3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1)\cdot(c_1, c_2, c_3)\end{eqnarray}
+\begin{eqnarray}=(\pmb{a}\times\pmb{b})\cdot\pmb{c}\end{eqnarray}
+
+% 
+\noindent{\textbf{答}}\ref $\pmb{a}, \pmb{b}, \pmb{c}$が張る平行六面体の体積$V$は, $\pmb{a}, \pmb{b}$が張る平行四辺形を底面と考えれば, 
+高さは, $\pmb{c}$を底面の法線方向へ正射影した長さである。底面積を$S$, 底面の法線ベクトルを$\pmb{e}$とすると, 
+高さは, $|\pmb{c}\cdot\pmb{e}|$である。従って, $V=S|\pmb{c}\cdot\pmb{e}|$である。一方, 式(32)より, 
+$V=|(\pmb{a}\times\pmb{b})\cdot\pmb{c}|$である。従って, 
+$S|\pmb{c}\cdot\pmb{e}|=|(\pmb{a}\times\pmb{b})\cdot\pmb{c}|$である。これがどのような$\pmb{a}, \pmb{b}, \pmb{c}$
+についても成り立たねばならないから, 
+$S\pmb{e}=\pm(\pmb{a}\times\pmb{b})$である。従って, $S=|\pmb{a}\times\pmb{b}|$である。つまり, 
+$\pmb{a}\times\pmb{b}$の大きさは, $\pmb{a}, \pmb{b}$が張る平行四辺形の面積に等しい。
+
+さて, 「基礎数学」で定義したように, 式(32)の$V(\pmb{a}, \pmb{b}, \pmb{c})$は, $\pmb{a}$から$\pmb{b}$に右ネジ
+をまわすときにネジが進む側に$\pmb{c}$があるときはプラス, そうでないときはマイナスである。前者のときは, 式(32)
+より, $(\pmb{a}\times\pmb{b})\cdot\pmb{c}$はプラスである。つまり$\pmb{a}\times\pmb{b}$は$\pmb{c}$と同じ
+方（角度は0から$\pi/2$までの間）にある。つまり$\pmb{a}\times\pmb{b}$は$\pmb{a}$から$\pmb{b}$に右ネジを
+まわすときにネジが進む側にある。問9の式(27)(28)より, $\pmb{a}\times\pmb{b}$は$\pmb{a}, \pmb{b}$の両方に
+垂直だから, 結局, $\pmb{a}\times\pmb{b}$は$\pmb{a}$から$\pmb{b}$に右ネジをまわすときにネジが進む方向と
+同じ方向を向いている。
+
+% 
+\noindent{\textbf{答}}\ref 略（$\pmb{a}$, $\pmb{b}$が張る平行四辺形の面積は幾何学的には式(33)右辺のようになる。）
+
+
+\item 問6: 微分方程式が線型かどうかを判断するには, 微分方程式を解く必要はありません。
+\item 問12: 複素数$z$を, $x+iy$としている人が大勢いました（$x, y \in \mathbb{R}$）。
+しかし, ここは, いきなり$z=re^{i\theta}$としていいのです（$r, \theta \in \mathbb{R}$）。
+複素数を座標形式($x+iy$)で表すのも極形式($re^{i\theta}$)で表すのも, 互いに同等です。
+複素数は, 最初に座標形式で定義されますが, 極形式の存在を知った今は, 複素数を最初から極形式
+で表してもかまわないのです。
+\end{itemize}
+\vspace{0.3cm}
+
+
