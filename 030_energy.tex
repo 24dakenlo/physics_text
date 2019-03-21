@@ -1,6 +1,6 @@
 \chapter{仕事とエネルギー}
 
-{\small 注: この章を理解するには, 数学リメディアル教材で「積分」を理解していることが必要。}
+{\small 注: この章を理解するには, 「積分」を理解していることが必要。}
 
 本章では「エネルギー」について学ぶ。世の中には「エネルギー」という言葉が溢れているが, 
 なぜそんなに「エネルギー」って大事なのだろうか? ていうか, そもそも「エネルギー」って
@@ -98,7 +98,7 @@ $2\Delta x$や, 物体が上に上がる$\Delta x$のことだ。
 物体Bに関して重力がなす仕事は, $-mg\{\sin(\pi/3)\}\Delta x$である。マイナスがつくのは, 物体Bが重力
 と逆方向(上方向)に移動したからだ。仮想仕事の原理より, 
 \begin{eqnarray}
-\Bigl(3\text{ kg})g\Bigl(\sin\frac{\pi}{6}\Bigr)\Delta x-mg\Bigl(\sin\frac{\pi}{3}\Bigr)\Delta x=0
+(3\text{ kg})g\Bigl(\sin\frac{\pi}{6}\Bigr)\Delta x-mg\Bigl(\sin\frac{\pi}{3}\Bigr)\Delta x=0
 \end{eqnarray}
 ここから, $m=\sqrt{3}$~kgが出てくる。(例おわり)
 \end{exmpl}
@@ -243,7 +243,6 @@ m_1l_1=m_2l_2\label{eq:principle_balance}
 必要である（でなければ, どの時点での力を掛け算すればいいのかわからない）。では, 
 移動中に力が次第に変化するような場合は, 仕事はどのように定義されるのだろうか? 
 
-%2011.4.2 ヤマサキ　仕事の定義を定式化する中の, シグマをインテグラルにするところ。今のリメディアルの記述と整合的にするために式を追加。
 いま, ある物体に力$F$がかかっているとき, それを力の向きに$\Delta x$だけ
 動かす。 $\Delta x$だけ動かす間には$F$は変化しないと考える。すると, その力がする仕事$\Delta W$は, 
 \begin{eqnarray}
@@ -279,12 +278,12 @@ $W$と書こう:
 \begin{eqnarray}
 W\fallingdotseq \sum_{k=1}^{n}\Delta W_k\fallingdotseq\sum_{k=1}^{n}F_k\Delta x_k \label{eq:one_step_before_work2}
 \end{eqnarray}
-ここで$n$を十分大きくとって, $x_1, x_2, ..., x_n$の分割を十分に細かく
+ここで$n$を十分大きくとって, $x_1, x_2, \cdots, x_n$の分割を十分に細かく
 すれば, すなわち, \eref{eq:one_step_before_work2}の極限として, 
 \begin{eqnarray}
 W=\lim_{\substack{n\rightarrow \infty\\\Delta x_k\rightarrow 0}}\sum_{k=1}^{n}F_k\Delta x_k
 \end{eqnarray}
-を考えれば, 「数学リメディアル教材」の積分の定義より, 次式が成り立つ:
+を考えれば, 積分の定義（数学の教科書参照）より, 次式が成り立つ:
 \begin{itembox}{仕事の定義（力が一定でない場合）}
 物体を位置$a$から位置$b$まで運ぶときの仕事は, 
 \begin{eqnarray}
@@ -304,7 +303,7 @@ W=\int_{a}^{b} F(x)\,dx \label{eq:work2}
 従って, 式(\ref{eq:work2})より, 
 \begin{eqnarray}
 W&=&\int_{h_0}^{h_1} (-mg)\,dx\nonumber\\
- &=&-mg(h_1-h_0)=mg(h_0-h_1)
+ &=&-mg(h_1-h_0)=mg(h_0-h_1)\label{eq:grav_work_mgh}
 \end{eqnarray}
 となる。もし$h_0>h_1$なら（つまり物体が下がるとき）, $W>0$である。
 もし$h_0<h_1$なら（つまり物体が上がるとき）, $W<0$である。つまり, 重力に
@@ -334,7 +333,15 @@ W&=&\int_{R_0}^{R_1} \Bigl(-\frac{GMm}{x^2}\Bigr)\,dx=\Bigl[\frac{GMm}{x}\Bigr]_
 \end{exmpl}
 \mv
 
+\begin{q}\label{q:moveup_work} 質量$m$の質点を, 地表から高さ$h$まで移動させるときに重力がなす仕事を$E$とする。
+\begin{enumerate}
+\item $E$を, \eref{eq:grav_work_mgh}と\eref{eq:work_gravity}のそれぞれを用いて表せ（前者を$E_1$, 後者を$E_2$とする。地球を半径$R=6370$~km, 質量$M=5.972\times 10^{24}$~kgの球とし, 重力加速度を$g=9.823$~m~s$^{^2}$とする。物体に働く力は重力以外の力, 例えば自転による遠心力などは考えない）。
+\item $m$=10~kgとして, $h=100$~m (野球のホームランボールの高度), $h=10$~km (旅客機の飛行高度), $h=1000$~km (人工衛星の高度)のそれぞれの場合で, $E_1$と$E_2$を求めて比較せよ。有効数字3桁程度で。
+\item $h$が大きい場合に$E_1$と$E_2$が違う値になるのはなぜか?
+\end{enumerate}
+\end{q}
 %
+
 \begin{q}\label{q:spring_work}
 バネ定数$k$のバネについた物体を, バネの自然状態を原点として位置$x_0$
 から位置$x_1$まで動かすときに, バネの弾性力がなす仕事$W$は, 
@@ -355,7 +362,7 @@ W=-\frac{1}{2}\,k\,(x_1^2-x_0^2)\label{eq:spring_work}
 ピストンは十分に軽いとし, 重力を無視する。気体の圧力を$P$とする。
 \begin{figure}[h]
     \centering
-    \includegraphics[width=7cm]{gas_piston.eps}
+    \includegraphics[width=6cm]{gas_piston.eps}
     \caption{気体の入ったシリンダー。}\label{fig:gas_piston}
 \end{figure}
 \begin{enumerate}
@@ -647,8 +654,7 @@ $0=W_{01}+W_{10}$
 となる。(例おわり)
 \end{exmpl}
 
-数学リメディアル教材で学んだように, 仕事率の単位は, SI単位系で表すと, 
-kg~m$^2$ s$^{-3}$, もしくは, 同じことだがJ s$^{-1}$だ。この単位を
+仕事率の単位は, SI単位系で表すと, kg~m$^2$~s$^{-3}$, もしくは, 同じことだがJ~s$^{-1}$だ。この単位を
 ワットといい, Wとあらわす。\mv
 
 \begin{q}\label{q:work_rate}
@@ -704,7 +710,7 @@ U(x)=\frac{k\,Q\,q}{x}\label{eq:potential_Coulomb}
 \begin{enumerate}
 \item 物体1が位置$x$に作る電位を式であらわせ。
 \item 100年ほど前の理論(ボーアの原子模型という)では, 
-水素原子は, 陽子から0.529$\times10^{-10}$~mの
+水素原子は, 陽子から0.529$\times 10^{-10}$~mの
 付近に電子があると考えられていた。その付近の電位は何Vか?
 \end{enumerate}
 \end{q}
@@ -729,15 +735,15 @@ U(x)=\frac{k\,Q\,q}{x}\label{eq:potential_Coulomb}
 \item 電位とは何か?
 \item 電圧とは何か?
 \item 電位の単位をSI単位系で述べよ。
-\item 2~Vの電位に0.3 Cの電荷があるときのポテンシャルエネルギーを求めよ。
-\item 1~Vの電位に電子が1個あるときのポテンシャルエネルギーを求めよ。
+\item 2.0~Vの電位に0.30 Cの電荷があるときのポテンシャルエネルギーを求めよ。
+\item 1.0~Vの電位に電子が1個あるときのポテンシャルエネルギーを求めよ。
 \end{enumerate}
 \end{q}
 \mv
 
 問\ref{q:potential_Volt}(5)で考えた, 1~Vの電位にある電子1個の
 ポテンシャルエネルギーの絶対値である
-$1.602\times10^{-19}$~Jは, 1~eVと呼ばれる。\underline{eV}\index{eV}は
+$1.602\times 10^{-19}$~Jは, 1~eVと呼ばれる。\underline{eV}\index{eV}は
 \underline{エレクトロン・ボルト}\index{えれくとろんぼると@エレクトロン・ボルト}という
 新たな単位であり, 電子や原子や分子の様々な形のエネルギーを表現する
 のによく使う。特に化学でよく使う。\mv
@@ -754,7 +760,7 @@ $\alpha$線はヘリウム原子核が飛んでくるもの, $\beta$線は電子
 $\alpha$粒子1個あたり5.5~MeVである。このときの$\alpha$粒子の速さを求めよ。
 \item 放射性元素セシウム137の崩壊で発する$\beta$線のエネルギーは, 
 電子1個あたり510~keVである。このときの電子の速さを求めよ。なお
-$m_{\text{e}}$=9.1$\times10^{-31}$~kgである。
+$m_{\text{e}}$=9.1$\times 10^{-31}$~kgである。
 \end{enumerate}
 ヒント: ここでいう「エネルギー」は運動エネルギーである。
 \end{q}
@@ -790,8 +796,8 @@ A=C/sがAの定義だと思っておくほうがわかりやすいだろう。}�
 $V$の単位はV, つまりJ/Cであり, $I$の単位はAだから, 
 $VI$の単位はJ~A/Cである(ここで出てきた, 斜字体の$V$と立体の
 Vは, 互いに意味が違うことに君は気づいているだろうか? 
-数学リメディアル教材で学んだように, 斜字体は変数, 立体は
-単位を表す約束だった!)。ここで, C=A~sであることを思い出すと, 
+SI単位系の規定では, 斜字体は変数, 立体は単位を表す約束だった!)。
+ここで, C=A~sであることを思い出すと, 
 J~A/Cは結局, J/s, つまりW (ワット)になる。うまくつじつまが
 あっているではないか!
 
@@ -836,9 +842,13 @@ LEDであり, 片方が23~Wの消費電力である。左右両方のヘッド�
 5時間で汲み上げる場合の仕事率を求めよ。\end{exq}
 %1.4W
 
-\begin{exq} 頂角60度の円錐があり、そこに質量100~gの円形の鎖がかぶさっている。
-この鎖にかかる張力の大きさを求めよ。ただし円錐表面と鎖の間には摩擦は無い（つるつるしている）
-とする。重力加速度は$g$=9.8~m~s$^{-2}$とする。\end{exq}
+\begin{exq} 頂角60度の円錐があり, その中腹に質量100~gの円形の鎖が水平にかぶさっている。
+鎖にかかる張力の大きさを求めよ。ただし円錐表面と鎖の間には摩擦は無い（つるつるしている）とする。
+重力加速度は$g$=9.8~m~s$^{-2}$とする。\end{exq}
+
+\begin{exq} 1辺の長さが$L$のピラミッド（正八面体の上部半分）を地表付近に建設するのに必要最小限のエネルギー$E$を求めよう。ピラミッドを構成する石の密度を$\rho$とする。ピラミッドは隙間なくびっちりと石が詰まってできているものとする。ピラミッドの自重などで石は変形したりしないとする。求める精度は有効数字2桁程度とする。
+(1) ピラミッドの高さ$H$を$L$を用いて表わせ。(2) 高さ$h$から$h+dh$にある部分の体積$dV$を, $H$, $h$, $dh$を用いて表わせ($h<H$とし, $dh$は微小量とする)。(3) その部分の質量$dM$を求めよ。(4)その部分を地表面から持ち上げるのに必要な仕事$dE$を求めよ。(5) 前小問の結果を, $h=0$から$h=H$まで積分して, $E$を$L, g, \rho$を用いて表わせ。\end{exq}
+\hv
 
 
 \section{解答}
@@ -852,47 +862,52 @@ LEDであり, 片方が23~Wの消費電力である。左右両方のヘッド�
 \vspace{0.2cm}
 
 % 
-\noindent{\textbf{答}}\ref{q:teko}
-\begin{enumerate}
-\item 略（ヒント: 直角三角形の高さを三角関数で表す）。
-\item 物体1について, 重力は鉛直下向きで$m_1g$である。その重力が働く
+\noindent{\textbf{答}}\ref{q:teko} \\
+(1) 略（ヒント: 直角三角形の高さを三角関数で表す）。\\
+(2) 物体1について, 重力は鉛直下向きで$m_1g$である。その重力が働く
 点である物体1の, 重力方向（鉛直下向き）への変位\footnote{位置の変化量
 のことを変位(displacement)という。}は$h_1$であり, それは前問より$l_1\sin\theta$
-である。従って, 重力が物体1にした仕事は
-\begin{eqnarray}m_1gh_1=m_1gl_1\sin\theta\end{eqnarray}
+である。従って, 重力が物体1にした仕事は$m_1gh_1=m_1gl_1\sin\theta$。
 
 物体2については, 重力は鉛直下向きで$m_2g$である。物体2の重力の方向
 （鉛直下向き）への変位は$-h_2$である（マイナスがつくのは, 重力とは逆向きだから）。
 それは前問より$-l_2\sin\theta$
 である。従って, 重力が物体2にした仕事は
-\begin{eqnarray}-m_2gh_2=-m_2gl_2\sin\theta\end{eqnarray}
-\item 仮想仕事の原理より, 前問の2つの仕事の和は0だから, 
-\begin{eqnarray}m_1gl_1\sin\theta-m_2gl_2\sin\theta=0\end{eqnarray}
-従って, 
-\begin{eqnarray}m_1l_1=m_2l_2\end{eqnarray}
-\end{enumerate}
+$-m_2gh_2=-m_2gl_2\sin\theta$。\\
+(3) 仮想仕事の原理より, 前問の2つの仕事の和は0だから, 
+$m_1gl_1\sin\theta-m_2gl_2\sin\theta=0$。従って, \\
+$m_1l_1=m_2l_2$。
 \vspace{0.2cm}
 
 %
-\noindent{\textbf{答}}\ref{q:jack}
-\begin{enumerate}
-\item ハンドルをまわす距離は$2\pi r$。ハンドルを回す力は, ハンドルの移動（回転）の
+\noindent{\textbf{答}}\ref{q:jack} \\
+(1) ハンドルをまわす距離は$2\pi r$。ハンドルを回す力は, ハンドルの移動（回転）の
 方向と常に一致しており, その大きさは$F$。したがって, ハンドルを1回転させるときに回す手がなす仕事は, 
-$2\pi r F$。
-\item ハンドルが1回転するときに, 上載物は$\Delta y$だけ持ち上がる。このとき, 上載物にかかる
+$2\pi r F$。\\
+(2) ハンドルが1回転するときに, 上載物は$\Delta y$だけ持ち上がる。このとき, 上載物にかかる
 重力は, 下向き（上載物の移動とは逆方向）に$mg$の大きさでかかるから, 重力のなす仕事は, 
-$-mg\Delta y$となる。
-\item ハンドルが1回転することを微小な変位であるとみなせば, 仮想仕事の原理より, 
-ハンドルを回す手がなす仕事と重力がなす仕事の和は0である。従って与式が成り立つ。
-\item 前小問の式を$F=$のように変形すればよい。
-\item 前小問の式に各数値を代入して, 23 N。これは約2~kgの物体にかかる重力, つまり, 
+$-mg\Delta y$となる。\\
+(3) ハンドルが1回転することを微小な変位とみなせば, 仮想仕事の原理より, 
+ハンドルを回す手がなす仕事と重力がなす仕事の和は0である。従って与式が成り立つ。\\
+(4) 前小問の式を$F=$のように変形すればよい。\\
+(5) 前小問の式に各数値を代入して, 23 N。これは約2~kgの物体にかかる重力, つまり, 
 2リットル入りのペットボトルを直接持ち上げる程度の力である。ジャッキを使えば, 
 それで1000~kgの上載物を持ち上げることができるのだ。
-\end{enumerate}
+\vspace{0.2cm}
 
 % 
 \noindent{\textbf{答}}\ref{q:energy}
 仕事が形を変えた量, もしくは仕事に形を変えることができる量。
+\vspace{0.2cm}
+
+\noindent{\textbf{答}}\ref{q:moveup_work} (略解)
+\begin{enumerate}
+\item $E_1=mgh$, $E_2=GMm\{1/R-1/(R+h)\}$
+\item $h=100$~mのとき, $E_1=9.82\times 10^{3}$~J, $E_2=9.82\times 10^{3}$~J (有効数字3桁では同じ)。
+$h=10$~kmのとき, $E_1=9.82\times 10^{5}$~J, $E_2=9.81\times 10^{5}$~J。
+$h=1000$~kmのとき, $E_1=9.82\times 10^{7}$~J, $E_2=8.49\times 10^{7}$~J。
+\item (略)
+\end{enumerate}
 \vspace{0.2cm}
 
 % 
@@ -967,16 +982,16 @@ U(R)=-W(R)=-\frac{GMm}{R}
 \begin{enumerate}
 \item \eref{eq:potential_g}において, $m=2$~kg, $g=9.8$~m~s$^{-2}$, $h=10$~mとすれば, 
 $U=196\,\,\text{J}\fallingdotseq 200$ J
-\item 問\ref{q:YoungModulus}(3)より, バネ定数$k$は, $k=6.2\times10^4$~kg s$^{-2}$。
+\item 問\ref{q:YoungModulus}(3)より, バネ定数$k$は, $k=6.2\times 10^4$~kg s$^{-2}$。
 また, $x=0.001$~mとして, これらを\eref{eq:potential_spring}に代入すれば, $U=0.031$ J。
 \item 地球の質量を$M$, 月の質量を$m$, 地球と月の距離を$x$とすれば, 
 \begin{eqnarray*}
-G&=&6.7\times10^{-11}\,\text{ m}^3\,\,\text{kg}^{-1}\,\,\text{s}^{-2}\\
-M&=&6.0\times10^{24}\,\text{ kg}\\
-m&=&7.3\times10^{22}\,\text{ kg}\\
-x&=&4.0\times10^{8}\,\text{ m}
+G&=&6.7\times 10^{-11}\,\text{ m}^3\,\,\text{kg}^{-1}\,\,\text{s}^{-2}\\
+M&=&6.0\times 10^{24}\,\text{ kg}\\
+m&=&7.3\times 10^{22}\,\text{ kg}\\
+x&=&4.0\times 10^{8}\,\text{ m}
 \end{eqnarray*}
-これらを\eref{eq:potential_gravity}に代入して, $U=-7.3\times10^{28}$ J。
+これらを\eref{eq:potential_gravity}に代入して, $U=-7.3\times 10^{28}$ J。
 （ただし無限遠を基準点とする。）
 \end{enumerate}
 \mv
@@ -1034,7 +1049,7 @@ $W_{01}+W_{10}=-2F_{\text m}X$
 
 %
 \noindent{\textbf{答}}\ref{q:watt_hour}
-1 W h = 1 J s$^{-1} \times 3600$ s=3600 J
+1~W~h = 1~J~s$^{-1} \times 3600$~s=3600~J
 \mv
 
 
@@ -1068,8 +1083,8 @@ U(x)=-W=\frac{k\,Q\,q}{x}
 \begin{eqnarray}
 \frac{U(x)}{q}=\frac{k\,Q}{x}\label{eq:voltage_Coulomb}
 \end{eqnarray}
-\item $x=0.529\times10^{-10}$~mとする。陽子の電荷は電荷素量なので
-$Q=1.602\times10^{-19}$~C。また, \eref{eq:coulomb}より, 
+\item $x=0.529\times 10^{-10}$~mとする。陽子の電荷は電荷素量なので
+$Q=1.602\times 10^{-19}$~C。また, \eref{eq:coulomb}より, 
 $k=8.987\times 10^{9}$ N~m$^2$ C$^{-2}$。
 これらを\eref{eq:voltage_Coulomb}に
 代入すると, 27.2~V。
@@ -1082,19 +1097,23 @@ $k=8.987\times 10^{9}$ N~m$^2$ C$^{-2}$。
 かかる仕事を電荷で割ったもの。多くの場合, 2点間の電位の差（電位差）。
 \item J~C$^{-1}$, 言い換えると, V。
 \item 0.6~J
-\item 電子の電荷は$-1.602\times10^{-19}$ Cなので, それが1~Vの電位にあると, 
-$-1.602\times10^{-19}$ J。
+\item 電子の電荷は$-1.602\times 10^{-19}$ Cなので, それが1~Vの電位にあると, 
+$-1.602\times 10^{-19}$ J。
 \end{enumerate}
 \mv
 
 
 \noindent{\textbf{答}}\ref{q:radiation_eV}
 \begin{enumerate}
-\item $m_{\text{He}}=4$~g$/(6.0\times10^{23})$=...=6.7$\times10^{-27}$~kg。
+\item $m_{\text{He}}=4$~g$/(6.0\times 10^{23})=\cdots=6.7\times 10^{-27}$~kg。
 \item $\alpha$線のエネルギーを$E$, 速さを$v$とすると, $\frac{1}{2}m_{\text{He}}v^2=E$。
-従って, $v=\sqrt{2E/m_{\text{He}}}=...=1.6\times10^7$~m~s$^{-1}$。
+従って, $v=\sqrt{2E/m_{\text{He}}}=\cdots=1.6\times 10^7$~m~s$^{-1}$。
 \item $\beta$線のエネルギーを$E$, 速さを$v$とすると, 上と同様に, 
-従って, $v=\sqrt{2E/m_{\text{e}}}=...=4.2\times10^8$~m~s$^{-1}$。
+従って, $v=\sqrt{2E/m_{\text{e}}}=\cdots=4.2\times 10^8$~m~s$^{-1}$。
+ところが, これは光速$c=299792458$~m/sより大きい! 世の中には光より速く動くものは無い
+ということがアインシュタインの特殊相対性理論で明らかにされている。従って, この結果は
+おかしい。このくらい速い運動になると, Newton力学は通用しない。特殊相対性理論を使って
+計算し直すと（その詳細は今はわからなくてよい）, $v=2.6\times 10^8$~m~s$^{-1}$となる。
 \end{enumerate}
 注: eVをJに直して計算しないと, 正しい答にはならない。単位を埋め込んで計算すれば, 
 それに気がつくはず!
@@ -1106,12 +1125,12 @@ $-1.602\times10^{-19}$ J。
 \noindent{\textbf{答}}\ref{eq:battery_Ah}　
 \begin{enumerate}
 \item 36~A~h=36~(C/s)$\times$3600~s=130000~C。
-\item 12~V$\times$36~A~h=$12\times36\times3600$~V~A~s=$1.6\times10^6$~J。
+\item 12~V$\times$36~A~h=$12\times 36\times 3600$~V~A~s=$1.6\times 10^6$~J。
 \item 左右両方で46~W。12~Vの電圧では, 46~W/(12~V)　=3.8~Aの電流が
 流れる。36~A~h/(3.8~A)　=9.4~h。およそ9時間で空になる。これがLEDでなく, 
 普通のハロゲンランプなら, もっと短い時間（数時間）で空になってしまう。
 \end{enumerate}
-
+\mv
 
 \begin{faq}{\small\textgt{本当なのかなーって疑いたくなる値が答えだったり, 物理ってなんなんだー}
 ... 皆さんの既成概念を壊すために, そういうのを狙って問題を作ってます。}\end{faq}\mv

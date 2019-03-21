@@ -1,30 +1,21 @@
 %2011.4.4 ヤマサキ　この章は大きく変更した箇所はありません。
 \chapter{角運動量保存則}
 
-注: この章を理解するには, 数学リメディアル教材で「外積」を理解
-していることが必要である。また, この章では高校物理はほとんど通用しない。\mv
-
-
 \section{外積}\index{がいせき@外積}
 
-以下の話で, 「外積」という概念が必要になる。詳しいことは数学リメディアル
-教材の「外積」の箇所を読むとして(必ず読むこと!!), ここでは外積について概略を
-述べておく。
+以下の話で, 「外積」という概念が必要になる。詳しいことは数学の教科書を読んでもらうとして, 
+ここでは外積の概略だけを述べておく。
 
 3次元空間中の正規直交座標系\footnote{$x, y, z$の3つの座標軸が
 互いに直交しており長さのスケールが同じ座標系。まあいわば「普通の座標系」
 のことである。厳密には, 「右手系」という性質を満たす必要がある。
 そのことは今, 理解できなくてもよい。}で
-表された2つの幾何ベクトル:
-\begin{eqnarray}
-&&{\bf a}=(a_1, a_2, a_3)\\
-&&{\bf b}=(b_1, b_2, b_3)
-\end{eqnarray}
+表された2つの幾何ベクトル${\bf a}=(a_1, a_2, a_3)$, ${\bf b}=(b_1, b_2, b_3)$
 について, 
 \begin{eqnarray}
 (a_2b_3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1)
 \end{eqnarray}
-というベクトルを与えるような演算を外積と呼び, ${\bf a}\times{\bf b}$
+というベクトルを与えるような演算を\index{がいせき@外積}\underline{外積}と呼び, ${\bf a}\times{\bf b}$
 と表す(この$\times$を省略したり$\bullet$と書き換えたりしてはいけない!)。すなわち, 
 \begin{eqnarray}
 &&{\bf a}\times{\bf b}=(a_1, a_2, a_3)\times(b_1, b_2, b_3)\nonumber\\
@@ -32,7 +23,8 @@
 \label{eq:vectprod}\end{eqnarray}
 である。
 
-外積には, 以下のような重要な幾何学的性質がある(ここでは証明はしない): 空間の任意の幾何ベクトル${\bf a}, {\bf b}$について, 
+外積には, 以下のような幾何学的性質がある(ここでは証明はしない): 
+%空間の任意の幾何ベクトル${\bf a}, {\bf b}$について, 
 \begin{itemize}
 \item 性質1. $|{\bf a}\times{\bf b}|$は, ${\bf a}, {\bf b}$が張る平行四辺形の面積に等しい
 \footnote{それは$|{\bf a}||{\bf b}|\sin\theta$である。ここで, $\theta$は${\bf a}, {\bf b}$のなす角。}。
@@ -53,12 +45,11 @@
 \item ${\bf a}=(1, 2, 0),\,\,\, {\bf b}=(1, 1, -1)$
 \item ${\bf a}=(1, 0, 1),\,\,\, {\bf b}=(-1, 1, 2)$
 \end{enumerate}\end{q}
-\mv
 
 \begin{q}\label{q:vect_vecprod_diff_phys} 2つのベクトル: 
 \begin{eqnarray*}
-&&{\bf a}(t)=\bigl(a_1(t), a_2(t), a_3(t)\bigr)\\
-&&{\bf b}(t)=\bigl(b_1(t), b_2(t), b_3(t)\bigr)
+{\bf a}(t)=\bigl(a_1(t), a_2(t), a_3(t)\bigr), 
+{\bf b}(t)=\bigl(b_1(t), b_2(t), b_3(t)\bigr)
 \end{eqnarray*}
 が, ともに変数$t$の関数であるとする。次式を示せ(ダッシュは$t$による微分を表す):
 \begin{eqnarray}
@@ -111,7 +102,7 @@ $m$はスカラー(だから細字)。}\label{fig:angular_mom}
 \item 角運動量は, 位置ベクトルと運動量の両方に垂直であることを示せ。
 \end{enumerate}
 \end{q}
-\vspace{0.2cm}
+\mv
 
 この「角運動量」なる奇妙な物理量がどのように便利なのかは後回しに
 して, とりあえずいくつかの系の角運動量を考えてみることで角運動量に
@@ -140,12 +131,12 @@ $xy$平面上で, 原点を中心とする半径$r$の円周上を, 質量$m$の
 \end{enumerate}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=6cm]{angular_mom_circ.eps}
+    \includegraphics[width=5cm]{angular_mom_circ.eps}
     \caption{等速円運動する質点の角運動量}\label{fig:angular_mom_circ}
 \end{figure}\end{q}
 
 この問題の結果から, 原点を中心とする等速円運動をする質点の角運動量は, 
-時間によらず一定であることがわかった。
+時刻によらず一定であることがわかった。
 
 ちなみに角運動量は, 回転以外の運動についても考えることができる。そもそも, 
 角運動量の定義, つまり\eref{eq:def_angmom}には, 運動が回転であるというような
@@ -166,12 +157,12 @@ $xyz$空間の中で, 質量$m$の質点が, 時刻$t$のときに位置ベク�
 \end{enumerate}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=6cm]{angular_mom_lin.eps}
+    \includegraphics[width=5cm]{angular_mom_lin.eps}
     \caption{等速直線運動する質点の角運動量}\label{fig:angular_mom_lin}
 \end{figure}
 \end{q}
 
-この問題の結果から, 等速直線運動をする質点の角運動量は, 時間によらず一定
+この問題の結果から, 等速直線運動をする質点の角運動量は, 時刻によらず一定
 であることがわかった。
 
 しかし, ちょっと変な気がしないだろうか? 問\ref{q:straight_angularmom}では, 
@@ -198,7 +189,7 @@ $y_0$は, 質点が運動する直線（この場合は$x$軸に平行な直線�
 
 \section{角運動量保存則}\index{かくうんどうりょうほぞんそく@角運動量保存則}
 
-\eref{eq:def_angmom}の両辺を, 時間で微分してみよう。質量$m$を一定とすれば, 
+\eref{eq:def_angmom}の両辺を, 時刻で微分してみよう。質量$m$を一定とすれば, 
 \begin{eqnarray}
 \frac{d}{dt}{\bf L}&=&\frac{d}{dt}({\bf r}\times {\bf p})\label{eq:dLdt1}\\
                     &=&\frac{d}{dt}(m{\bf r}\times{\bf v})\label{eq:dLdt2}\\
@@ -240,6 +231,8 @@ ${\bf r}\times{\bf F}$, つまり位置ベクトルと力の外積のことを,
 という重要な物理法則である\footnote{ただし, これは導出過程から明らかなように, 運動の
 3法則(特に${\bf F}=m{\bf a}$)から派生する法則なので, 基本法則とは言えない。}。\mv
 
+\begin{q}\label{q:derive_1_angmom} \eref{eq:angmomtorq}の導出を再現せよ。\end{q}
+
 この法則を複数の質点に拡張しよう。いま, $n$個の質点が互いに力を及ぼしあいながら
 運動する状況を考えよう。$k$番目($k=1, 2, \cdots, n$)の質点のことを「質点$k$」と呼び, 
 その質量, 位置, 速度, 角運動量をそれぞれ$m_k$, ${\bf r}_k$, ${\bf v}_k$, ${\bf L}_k$
@@ -256,7 +249,7 @@ ${\bf F}_{kk}={\bf 0}$としよう。また, ${\bf F}_{k}^{\text{e}}$は, 外力
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=6.5cm]{angular_mom_sys.eps}
+    \includegraphics[width=6.0cm]{angular_mom_sys.eps}
     \caption{質点系に働く力。この図では内力どうし(${\bf F}_{12}$と${\bf F}_{21}$など)が
 中心力(後述)である（同一直線上にある）ことを仮定している。}\label{fig:angular_mom_sys}
 \end{figure}
@@ -312,11 +305,13 @@ ${\bf r}_j-{\bf r}_k$は質点$k$から質点$j$へのベクトルである。
 \frac{d}{dt}\sum_{k=1}^n {\bf L}_k=\sum_{k=1}^n{\bf r}_k\times{\bf F}_{k}^{\text{e}}\label{eq:totangmomtorq1}
 \end{eqnarray} 
 となる。この式は味わい深い。左辺の$\sum$は全質点の角運動量の和であり, 
-全角運動量という。右辺は, 各質点に働く外力によるトルクの和だ。すなわち, 
+全角運動量という。右辺は, 各質点に働く外力によるトルクの和だ。すなわち, 以下の法則が成り立つことが証明された:
 \begin{itembox}{質点系に関する角運動量保存則(1)}
 内力が中心力であるような質点系(質点の集合)については, その全角運動量の, 
 単位時間あたりの変化は, 各質点に働く外力によるトルクの総和に等しい。
 \end{itembox}
+
+\begin{q}\label{q:derive_n_angmom} \eref{eq:totangmomtorq1}の導出を再現せよ。\end{q}
 
 ここで, \textgt{特に, 全ての質点が静止していれば}, 当然ながら全ての$k$
 について${\bf L}_k={\bf 0}$が恒等的に成り立つ。従って, 
@@ -347,7 +342,7 @@ $t$で微分したもの（\eref{eq:totangmomtorq1}の左辺)も恒等的に${\b
 である。この式は, 全角運動量は時刻$t$によらず一定である, ということだ。従って, 
 次の法則が成り立つことがわかった：
 \begin{itembox}{質点系に関する角運動量保存則(2)}
-外力が無く, 内力が中心力である場合は, 全角運動量は時間によらず一定である。
+外力が無く, 内力が中心力である場合は, 全角運動量は時刻によらず一定である。
 \end{itembox}
 
 
@@ -386,55 +381,45 @@ $t$で微分したもの（\eref{eq:totangmomtorq1}の左辺)も恒等的に${\b
 
 \section{解答}
 
-\noindent{\textbf{答}}\ref{q:univ_vectprod0_phys} 略(数学リメディアル教材に同じ問題が載っているので。)\\
+\noindent{\textbf{答}}\ref{q:univ_vectprod0_phys} 略(「大学１年生のための数学入門」に同じ問題が載っているので。)\\
 
-\noindent{\textbf{答}}\ref{q:vect_vecprod_diff_phys} 略(数学リメディアル教材に同じ問題が載っているので。)\\
+\noindent{\textbf{答}}\ref{q:vect_vecprod_diff_phys} 略(「大学１年生のための数学入門」に同じ問題が載っているので。)\\
 
 % 角運動量とは何か? 角運動量の次元は? 
 \noindent{\textbf{答}}\ref{q:angular_momentum}　
-\begin{enumerate}
-\item 略。
-\item ${\bf r}$のSI単位はm, ${\bf p}$のSI単位はkg~m~s$^{-1}$。従って, ${\bf r}\times{\bf p}$
+(1) 略。
+(2) ${\bf r}$のSI単位はm, ${\bf p}$のSI単位はkg~m~s$^{-1}$。従って, ${\bf r}\times{\bf p}$
 のSI単位はkg~m$^2$~s$^{-1}$。注: 外積は単なる「積」ではないが, その定義を見れば, 2つの物理量の
 外積の単位は, 元の物理量の単位の積になることがわかるだろう。
-\item 外積の性質2より, ${\bf r}\times{\bf p}$は${\bf r}$と${\bf p}$の両方に垂直。
-\end{enumerate}
-\vspace{0.2cm}
+(3) 外積の性質2より, ${\bf r}\times{\bf p}$は${\bf r}$と${\bf p}$の両方に垂直。
+\mv
 
 % $xyz$空間の中の$xy$平面上で, 原点を中心とする半径$r$の円周上を
 \noindent{\textbf{答}}\ref{q:circle_angularmom}
-\begin{enumerate}
-\item 題意より, 質点の位置は$xy$平面に限定されるので, $z$座標は常に0である。また, $xy$平面
+(1) 題意より, 質点の位置は$xy$平面に限定されるので, $z$座標は常に0である。また, $xy$平面
 内では, 原点から距離$r$で$x$軸から角度$\omega t$だけ回転した位置に質点はあるので, その位置
 は\eref{eq:circle_angularmom1}のようになる。
-\item \eref{eq:circle_angularmom1}を$t$で微分すると速度になる。それに$m$をかければ
+(2) \eref{eq:circle_angularmom1}を$t$で微分すると速度になる。それに$m$をかければ
 与式を得る。
-\item 
+(3) ${\bf L}={\bf r}\times{\bf p}$
 \begin{eqnarray*}
-{\bf L}&=&{\bf r}\times{\bf p}\\
-       &=&mr^2\omega(\cos \omega t, \sin \omega t, 0)
-         \times(-\sin \omega t, \cos \omega t, 0)\\
-       &=&(0, 0, mr^2\omega)
+&=&mr^2\omega(\cos \omega t, \sin \omega t, 0)
+      \times(-\sin \omega t, \cos \omega t, 0)\\
+&=&(0, 0, mr^2\omega)
 \end{eqnarray*}
 これは$t$を含まない式なので, $t$によらず一定。
-\end{enumerate}
-\vspace{0.2cm}
+\mv
 
 % $xyz$空間の中で, 質量$m$の質点が, 時刻$t$のときに位置ベクトル
 \noindent{\textbf{答}}\ref{q:straight_angularmom}
-\begin{enumerate}
-\item 
+(1)
 \begin{eqnarray*}\frac{d}{dt}{\bf r}=\frac{d}{dt}(Vt,\, y_0,\, 0)=(V,\, 0,\, 0)\end{eqnarray*}
 この式は, この質点が$x$軸方向に一定の速度で運動することを示している。従って等速直線運動。
-\item ${\bf p}=m{\bf v}=(mV, 0, 0)$
-\item 
-\begin{eqnarray*}
-{\bf L}&=&{\bf r}\times{\bf p}=(Vt,\, y_0,\, 0)\times(mV,\, 0,\, 0)\\
-       &=&(0,\, 0,\, -mVy_0)
-\end{eqnarray*}
+(2) ${\bf p}=m{\bf v}=(mV, 0, 0)$。
+(3) ${\bf L}={\bf r}\times{\bf p}=(Vt,\, y_0,\, 0)\times(mV,\, 0,\, 0)
+       =(0,\, 0,\, -mVy_0)$。
 これは$t$を含まない式なので, $t$によらず一定。
-\end{enumerate}
-\vspace{0.2cm}
+\mv
 
 % トルクとは何か? トルクは,
 \noindent{\textbf{答}}\ref{q:torque}　略。トルクのSI単位はN~m=kg~m$^2$s$^{-2}$。
@@ -446,20 +431,16 @@ $t$で微分したもの（\eref{eq:totangmomtorq1}の左辺)も恒等的に${\b
 % 質量$m$の質点が2つあって, 伸縮可能な軽い棒でつながっている。
 \noindent{\textbf{答}}\ref{q:2points_rotation}
 適当に座標をとれば, 1つの質点の位置は
-\begin{eqnarray*}
-{\bf r}=(r\cos\omega t, r\sin\omega t, 0)
-\end{eqnarray*}
-と書ける。
+${\bf r}=(r\cos\omega t, r\sin\omega t, 0)$と書ける。
 \begin{enumerate}
 \item ${\bf p}=m{\bf r}'=m(-r\omega\sin\omega t, r\omega\cos\omega t, 0)$
 従って, $|{\bf p}|=mr\omega$。
-\item
+\item ${\bf L}={\bf r}\times{\bf p}$
 \begin{eqnarray*}
-{\bf L}&=&{\bf r}\times{\bf p}\\
-       &=&(r\cos\omega t, r\sin\omega t, 0)\times m(-r\omega\sin\omega t, r\omega\cos\omega t, 0)\\
-       &=&mr^2\omega(\cos\omega t, \sin\omega t, 0)\times (-\sin\omega t, \cos\omega t, 0)\\
-       &=&mr^2\omega(0, 0, \cos^2\omega t+\sin^2\omega t)\\
-       &=&mr^2\omega(0, 0, 1)
+  &=&(r\cos\omega t, r\sin\omega t, 0)\times m(-r\omega\sin\omega t, r\omega\cos\omega t, 0)\\
+  &=&mr^2\omega(\cos\omega t, \sin\omega t, 0)\times (-\sin\omega t, \cos\omega t, 0)\\
+  &=&mr^2\omega(0, 0, \cos^2\omega t+\sin^2\omega t)\\
+  &=&mr^2\omega(0, 0, 1)
 \end{eqnarray*}
 従って, $|{\bf L}|=mr^2\omega$
 \item ともに$z$軸の正方向を向いている。
@@ -491,4 +472,53 @@ m\Bigl(\frac{r}{2}\Bigr)^2\Omega^2
 \hv
 
 
+
+
+\section{補遺: 熱放射}\label{sect:thermalemission}\index{ねつほうしゃ@熱放射}
+
+我々の身の回りは, 光に満ち溢れているが, その光はどこでどのように発生する
+のだろうか? 例えば太陽, 白熱電球, 蛍光灯, レーザー, 発光ダイオードなどの
+光源はどのような仕組みで光るのだろうか?
+
+物体を構成する分子や原子は, 前述したように固有エネルギーを持つ。
+そのエネルギーとは, もとをたどれば, 分子・原子・電子等の持つ運動エネルギーや
+ポテンシャルエネルギーだ。
+
+固有エネルギーは, 低いものから高いものまで, 離散的に(階段状に)存在
+する。それらをエネルギー準位と呼ぶ。そして, 個々の分子や原子のエネルギーが, 
+高い順位から低い順位に移り変わることがある。これを「遷移」\index{せんい@遷移}
+と言う。原子や分子が遷移するとき, そのエネルギーの差は, 何らかの形で
+原子や分子から放出される(でなければエネルギー保存則が成り立たない)。
+その「何らかの形」のひとつとして光を出すのが, 蛍光灯, レーザー, 
+発光ダイオード等だ。
+
+太陽や白熱電球も, 結局はそのような仕組みで光るのだが, 他とはちょっと違う。太陽や白熱電球
+は, 「熱が光に転化する」という仕組みで光るのだ。
+
+先述のように, 物体を構成する粒子は, その温度に応じたエネルギーを, 平均的に持つ。「平均的」
+ということは, 実際にはそれよりも大きなエネルギーを持つ粒子も多少あれば, それよりも小さな
+エネルギーを持つ粒子も多少はある。その状況で, 粒子が遷移すると, 光が放出され, 粒子の
+エネルギーは若干下がる。そしてエネルギーが下がった粒子は周囲の粒子と衝突したり光を
+吸収したりして, 再びもとのエネルギーに戻る。このようなことが無数に発生することで, 
+その物体から光が出続けるのだ。このような仕組みを「熱放射」と呼ぶ。
+
+実は, 太陽や白熱電球だけでなく, ほとんど全ての物体は, \underline{それぞれの温度に応じて熱放射
+している}。例えば, 君の体も熱放射している。君の体も光っているのだ!! ただし, 
+その光は, 人の肉眼で見える光（可視光)ではなく, 赤外線だ。だから, 赤外線を検知
+できるセンサーで人体を調べれば, 君の体表面の温度がわかるのだ。赤外線体温計
+はそれを利用している。また, 夜行性の動物を観察するのに赤外線カメラというものをよく
+使う(NHKの番組「ダーウィンが来た!」を見よ)。が, それも同じ事だ。
+動物は体温が高いため, 周囲よりも多くの赤外線を出す。それを検出するのだ。
+
+%熱放射の仕組みを定量的にきちんと理解するには, 量子統計力学という
+%物理学を学ばねばならない(それは大学3年生のレベルである)。ここでは, 
+%以上のような定性的な説明を受け入れて欲しい。
+
+%熱放射を
+%説明するのは, 以下の「プランクの法則」である:
+%\begin{itembox}{プランクの法則}
+%\begin{eqnarray}
+%B_{\lambda}(T)=\frac{2\pi h c^2}{\lambda^5}\frac{1}{\exp(\frac{hc}{\lambda k_{\text{B}}T})-1}
+%\end{eqnarray}
+%絶対温度$T$の完全黒体から放射する光のエネルギーは, 
 

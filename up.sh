@@ -1,3 +1,5 @@
 #!/bin/sh
-scp -pr 2017_physics_text.pdf nishida@ryuiki:~/public_html/lecture/2017_physics/
+year=2019
+scp -pr ${year}_physics_text.pdf nishida@pen:~/public_html/lecture/${year}_physics/
+scp -pr ${year}_physics_text.pdf nishida@pen:~/public_html/physics_text.pdf
 

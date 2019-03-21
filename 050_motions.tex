@@ -1,6 +1,6 @@
 \chapter{さまざまな運動}
 
-注: この章を理解するには, 数学リメディアル教材で三角関数を理解していることが必要である。\mv
+注: この章を理解するには, 三角関数を理解していることが必要である。\mv
 
 \section{単振動}\index{たんしんどう@単振動}
 \begin{figure}[h]
@@ -62,7 +62,7 @@
 x(t)=A\cos\omega t\label{eq:spring_Acos}
 \end{eqnarray}
 ここで$A$と$\omega$は適当な（未知の）正の定数である\footnote{$\omega$は
-ギリシア文字の「オメガ」の小文字。数学リメディアル教材参照。}。
+ギリシア文字の「オメガ」の小文字。}。
 この\eref{eq:spring_Acos}のグラフは, 図\ref{fig:springAcos}のようになる。
 \begin{figure}[h]
     \centering
@@ -153,7 +153,7 @@ x(t)=A\sin(\omega t+\phi'+\frac{\pi}{2})=A\cos(\omega t+\phi')
 違った形で表現しているに過ぎない。
 
 また, \eref{eq:spring_AcosBsin}
-に「三角関数の合成」(数学リメディアル教材参照)を適用すれば, \eref{eq:spring_Asinphi}の形に
+に「三角関数の合成」(数学の教科書を参照せよ)を適用すれば, \eref{eq:spring_Asinphi}の形に
 式変形できるし, 逆に\eref{eq:spring_Asinphi}や\eref{eq:spring_Acosphi}に三角関数の
 加法定理を適用すれば\eref{eq:spring_AcosBsin}のように式変形できる。つまり, 
 \eref{eq:spring_Acosphi}, \eref{eq:spring_Asinphi}, \eref{eq:spring_AcosBsin}の
@@ -317,32 +317,29 @@ X=\frac{v_0^2\sin2\theta}{g}\label{eq:throwtiltX}
 飛ばした距離を競うスポーツである。世界記録は86.7~mである。投げ上げの角度が, 前問で求めた角に
 一致していたと仮定して, 世界記録樹立時のハンマーの初速度を推定せよ。
 \end{q}
-\vspace{0.6cm}
-
+\hv
 
 
 \section{円運動}\index{えんうんどう@円運動}
 
 一定の速さで円周上を一方向に動く運動のことを, 等速円運動という。
 
-平面内の円運動を考えてみよう。$xy$座標系の中に質量$m$の質点があり, 何かの機構に
-よって, 原点の方向に, 一定の大きさ$F$の力でひっぱられて
-いるとしよう(図\ref{fig:circular_motion})。
+平面内の等速円運動を考えてみよう。$xy$座標系ので質量$m$の質点が, 
+原点を中心とする半径$r$の円周上を等速円運動しているとする
+（図\ref{fig:circular_motion}）。
 \begin{figure}[h]
     \centering
     \includegraphics[width=7.0cm]{circular_motion.eps}
     \caption{等速円運動}\label{fig:circular_motion}
 \end{figure}
-うまく条件が揃えば, この質点は, 原点を中心とする半径$r$の円周上を
-等速円運動する。そのことを証明しよう。
 
-まず, 時刻$t$における質点の位置, 速度, 加速度をそれぞれ
+時刻$t$における質点の位置, 速度, 加速度をそれぞれ
 \begin{eqnarray}
 {\bf r}(t)&=&(x(t), y(t))\\
 {\bf v}(t)&=&(v_x(t), v_y(t))\\
 {\bf a}(t)&=&(a_x(t), a_y(t))
 \end{eqnarray}
-とし\footnote{前章でも述べたが, 位置ベクトルは, {\bf r}と書くことも多い。}, 
+とし\footnote{前章でも述べたが, 位置ベクトルは, {\bf r}と書くことが多い。}, 
 $t=0$で質点は$x$軸上の点$(r, 0)$にあるとする。すなわち, 
 \begin{eqnarray}
 {\bf r}(0)=(x(0), y(0))=(r, 0)
@@ -359,21 +356,16 @@ $t=0$で質点は$x$軸上の点$(r, 0)$にあるとする。すなわち,
 &&{\bf a}(t)=(-r\omega^2\cos\omega t, -r\omega^2\sin\omega t)\label{eq:circle_motion_axay}\,\,\,\,\,\,\,\\
 &&{\bf a}(t)=-\omega^2{\bf r}(t)\label{eq:circle_motion_a}
 \end{eqnarray}
-\item 時刻$t$のとき質点に働く力${\bf F}(t)$は, 次式になることを示せ：
-\begin{eqnarray}{\bf F}=(-F\cos\omega t, -F\sin\omega t)\end{eqnarray}
-\item 質点の運動方程式は, 次式のようになることを示せ：
+\item 時刻$t$のとき質点に働く力を${\bf F}(t)=(F_x(t), F_y(t))$とすると, 次式が成り立つことを示せ：
 \begin{eqnarray}
--F\cos\omega t=ma_x(t)\label{eq:circle_motion_Fx}\\
--F\sin\omega t=ma_y(t)\label{eq:circle_motion_Fy}
+&&{\bf F}(t)=-m\omega^2{\bf r}(t)\label{eq:mromegasq_vec}\\
+&&F_x(t)=-mr\omega^2\cos\omega t\\
+&&F_y(t)=-mr\omega^2\sin\omega t
 \end{eqnarray}
-\item \eref{eq:circle_motion_axay}で表される$a_x(t), a_y(t)$は, 
-次式が成り立つときに限って上の運動方程式を満たす, ということを示せ。
+\item $F=|{\bf F}|$, $v=|{\bf v}|$とする。次式を示せ。
 \begin{eqnarray}
-F=mr\omega^2\label{eq:mromegasq}
-\end{eqnarray}
-\item 質点の速度${\bf v}$の大きさ$v$は次式となることを示せ。
-\begin{eqnarray}
-v=r\omega\label{eq:circle_motion_v_romega}
+&&F=mr\omega^2\label{eq:mromegasq}\\
+&&v=r\omega\label{eq:circle_motion_v_romega}
 \end{eqnarray}
 \item \eref{eq:mromegasq}は, 次式のようにもできることを示せ：
 \begin{eqnarray}
@@ -385,16 +377,28 @@ F=\frac{mv^2}{r}\label{eq:mvsqovr}
 \end{q}
 \vspace{0.2cm}
 
+\eref{eq:mromegasq_vec}を満たすような何らかの力が質点に働いていると, その質点は等速円運動をする。
+\eref{eq:mromegasq_vec}を「向心力」\index{こうしんりょく@向心力}と言う。というのも, 
+この${\bf F}$は円運動の中心から質点へのベクトル${\bf r}$とは真逆の向き, つまり質点
+から「中心への向き」だからである。
+
+\begin{q}\label{q:circular_motion} 以下の等速円運動（厳密にはそうとは言えないものもあるが, それも近似的に等速円運動とみなす）において, 向心力は何によって実現されているか?
+\begin{enumerate}
+\item 太陽の周りを地球がまわること。
+\item 君が糸の先におもりをつけて, それをひゅんひゅんと回すこと。
+\item 水平の広場で君が自転車を円形に走らせること。
+\end{enumerate}
+\end{q}
+
 \begin{q}\label{q:car_slip}
-前問の最後の結果から, 車を運転する時に, なぜカーブの手前で減速せねばならないか, 述べよ。
+車を運転する時に, なぜカーブの手前で減速せねばならないか, 述べよ。
 \end{q}
 \vspace{0.2cm}
 
-%向心力と遠心力
+「向心力」に似た言葉に「遠心力」がある（多くの人は, 向心力より遠心力の方が馴染み深いだろう）。両者は明確に別々の概念である。
+「遠心力」は\pref{sec:inertforce_rotate}で学ぶまで不用意に使わないようにしよう。\\
 
-
-
-実は, 単振動と円運動は, 密接な関係がある。等速円運動の方程式の
+さて, 実は, 単振動と円運動は, 密接な関係がある。等速円運動の方程式の
 ひとつである\eref{eq:circle_motion_a}を考えよう:
 \begin{eqnarray*}
 {\bf a}(t)=-\omega^2{\bf r}(t)
@@ -443,11 +447,11 @@ F=\frac{mv^2}{r}\label{eq:mvsqovr}
 \vspace{0.2cm}
 
 \begin{q}\label{q:spaceship}
-以下の宇宙飛行体は, それぞれ何時間で地球のまわりを一周するか? 地球の半径を6400 kmとし, 
+以下の宇宙飛行体は, それぞれ何時間で地球のまわりを一周するか? 地球の半径を6400~kmとし, 
 地球や以下の飛行体を質点とみなす。（）内は地表から飛行体への距離である。
 \begin{enumerate}
-\item 国際宇宙ステーション（約400 km）
-\item 気象衛星ひまわり（約36000 km）
+\item 国際宇宙ステーション（約400~km）
+\item 気象衛星ひまわり（約36000~km）
 \end{enumerate}
 \end{q}
 
@@ -488,13 +492,10 @@ F=\frac{mv^2}{r}\label{eq:mvsqovr}
 たくさんの分子を調べることができるのです。}\end{faq}\mv
 \hv
 
-\begin{exq}　
+\begin{exq}　以下の問に答えよ。ただし「遠心力」という言葉を使ってはならない（というか, 本来, 使う必要は無いのに使おうとする人が多い...泣）。
 \begin{enumerate}
-\item 自転車競技場(競輪場)のトラックのカーブ部分は斜面になっている。その理由を
-物理学的に説明せよ。
-\item 飛行機(旅客機)に乗ったことのある人は, 飛行機が旋回するとき, 機体を傾ける
-ということを知っているだろう。飛行機が左に旋回するとき, 左の翼は上げるか, 下げるか?
-その理由を物理学的に説明せよ。(1)とは違う理由であることに注意!
+\item 自転車競技場(競輪場)のトラックのカーブ部分は斜面になっている。その理由を物理学的に説明せよ。
+\item 飛行機(旅客機)に乗ったことのある人は, 飛行機が旋回するとき, 機体を傾けるということを知っているだろう。飛行機が左に旋回するとき, 左の翼は上げるか, 下げるか? その理由を物理学的に説明せよ。(1)とは違う理由であることに注意!
 \item 無重力だが空気はある, という環境（国際宇宙ステーションの中など）で紙飛行機を飛ばしたら, どのような運動をするか?
 \end{enumerate}
 \end{exq}
@@ -573,34 +574,14 @@ $y(0)=0$より$C_4=0$。$y'(0)=v_0\sin\theta$より, $C_3=v_0\sin\theta$。
 $g=9.8$~m~s$^{-2}$とすれば, $v_0=29.1$~m~s$^{-1}$。
 \mv
 
+
 % 平面内の円運動を考えてみよう
 \noindent{\textbf{答}}\ref{q:circle_motion}
 \begin{enumerate}
-\item 略（数学リメディアル教材参照）
-\item 原点から質点へのベクトル（つまり質点の位置ベクトル）は
-\begin{eqnarray}
-{\bf r}&=&(r\cos\omega t, r\sin\omega t)\nonumber\\
-       &=&r(\cos\omega t, \sin\omega t)
-\end{eqnarray}
-だから, 原点から質点へ向かう単位ベクトルは$(\cos\omega t, \sin\omega t)$。問題の仮定より, 
-質点にかかる力の方向は, 質点から原点への方向である。その方向の単位ベクトルは, 前述の単位ベクトル
-の逆向きだから, $(-\cos\omega t, -\sin\omega t)$。力の大きさは$F$なので, 結局, 力を
-あらわすベクトルは, 以下のようになる:
-\begin{eqnarray}
-{\bf F}(t)&=&F(-\cos\omega t, -\sin\omega t)\nonumber\\
-          &=&(-F\cos\omega t, -F\sin\omega t)
-\end{eqnarray}
-\item 略（$x, y$各方向の運動方程式を考えればよい）。
-\item \eref{eq:circle_motion_axay}で表された$a_x(t), a_y(t)$を\eref{eq:circle_motion_Fx}, \eref{eq:circle_motion_Fy}に代入すれば, 
-\begin{eqnarray}
--F\cos\omega t=-mr\omega^2\cos\omega t\\
--F\sin\omega t=-mr\omega^2\sin\omega t
-\end{eqnarray}
-となる。前者の両辺を$-\cos\omega t$で割ったり, 後者の両辺を$-\sin\omega t$で割ったり
-すれば, $F=mr\omega^2$, すなわち\eref{eq:mromegasq}が成り立つ。逆に, \eref{eq:mromegasq}
-が成り立てば, 上記の式が成り立つのは明らかだ。
-\item 略（\eref{eq:circle_motion_vxvy}を使って$(v_x, v_y)$の大きさを求めるだけ）。
-\item 略（\eref{eq:circle_motion_v_romega}と\eref{eq:mromegasq}から$\omega$を消去）。
+\item 略（「大学１年生のための数学入門」参照）
+\item 略（運動方程式${\bf F}=m{\bf a}$に\eref{eq:circle_motion_a}を代入）。
+\item 略（\eref{eq:mromegasq_vec}, \eref{eq:circle_motion_vxvy}のそれぞれの大きさを求める）。
+\item 略（\eref{eq:mromegasq}と\eref{eq:circle_motion_v_romega}で$\omega$を消去）。
 \item \eref{eq:mvsqovr}より, 4倍。
 \item \eref{eq:mvsqovr}より, 2倍。
 \end{enumerate}
@@ -654,7 +635,7 @@ $r=1.4960\times10^{11}$~mとすると, $\omega=1.99125\times10^{-7}$ Hz。
 \noindent{\textbf{答}}\ref{q:spaceship}
 \eref{eq:circle_grav_T}において$M$を地球の質量とすればよい。
 \begin{enumerate}
-\item $r=6800$ kmとすると, $T=5580$ s$\fallingdotseq$1.6時間。
-\item $r=42000$ kmとすると, $T=87000$ s$\fallingdotseq$24時間。
+\item $r=6800$~kmとすると, $T=5580$~s$\,\fallingdotseq\,$1.6時間。
+\item $r=42000$~kmとすると, $T=87000$~s$\,\fallingdotseq\,$24時間。
 \end{enumerate}
 
